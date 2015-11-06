@@ -1,0 +1,17 @@
+open terminal
+input command: ssh-keygen -t rsa
+press enter when prompted for a file (no file specified)
+come up with a password and enter it
+enter this mess: cat ~/.ssh/id_rsa.pub | ssh adam@107.170.219.218 "mkdir -p ~/.ssh && cat >>  ~/.ssh/authorized_keys"
+
+in order to copy files, paste this in download.command
+
+$!/bin/bash
+
+scp -r adam@107.170.219.218:/var/www/html/Capstone /wherever/the/hell/you/want
+
+in order to push files to server, run this guy
+
+$!/bin/bash
+
+scp -r /wherever/the/hell/you/want adam@107.170.219.218:/var/www/html/Capstone
